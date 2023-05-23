@@ -1,4 +1,4 @@
-package com.sinemturkcu.onlineshoppingsite.dto;
+package com.sinemturkcu.onlineshoppingsite.dto.response;
 
 
 import com.sinemturkcu.onlineshoppingsite.enums.EnumClientType;
