@@ -2,9 +2,8 @@ package com.sinemturkcu.onlineshoppingsite.controller;
 
 import com.sinemturkcu.onlineshoppingsite.General.RestResponse;
 import com.sinemturkcu.onlineshoppingsite.controller.contract.ClientControllerContract;
-import com.sinemturkcu.onlineshoppingsite.dto.ClientDto;
+import com.sinemturkcu.onlineshoppingsite.dto.response.ClientDto;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ClientSaveRequest;
-import com.sinemturkcu.onlineshoppingsite.entity.Client;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +24,7 @@ public class ClientController {
     }
 
     @GetMapping
-    public List<Client> getAll(){
+    public List<ClientDto> getAll(){
         return clientControllerContract.findAll();
     }
 
@@ -39,35 +38,9 @@ public class ClientController {
         return clientControllerContract.getByFullName(clientName);
     }
 
-    /*
-      ClientService clientService;
-
-    public ClientController(ClientService clientService) {
-        this.clientService = clientService;
-    }
-
-    @GetMapping
-    public List<Client> getAll(){
-        return clientService.getAll();
-    }
-
-    @PostMapping
-    public Client save(@RequestBody Client client){
-        return clientService.save(client);
-    }
-
-
-
-    @GetMapping("/{clientName}")
-    public Client getByClientName(@PathVariable String clientName){
-        return clientService.getByFullName(clientName);
-    }
-
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id){
-         clientService.deleteById(id);
+        clientControllerContract.delete(id);
     }
-     */
-
 
 }
