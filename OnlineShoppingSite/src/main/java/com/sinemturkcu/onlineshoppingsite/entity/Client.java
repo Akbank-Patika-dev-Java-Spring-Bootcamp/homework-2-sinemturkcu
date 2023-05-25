@@ -3,7 +3,7 @@ package com.sinemturkcu.onlineshoppingsite.entity;
 import com.sinemturkcu.onlineshoppingsite.General.BaseEntity;
 import com.sinemturkcu.onlineshoppingsite.enums.EnumClientType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,13 +15,13 @@ import lombok.Setter;
 public class Client extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "Fullname" , length = 100 , nullable = false)
     private String fullName;
 
-    @Email
+
     @Column(name = "Email" , length = 50 , nullable = false)
     private String email;
 
