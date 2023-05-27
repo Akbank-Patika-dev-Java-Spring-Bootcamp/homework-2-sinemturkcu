@@ -296,5 +296,10 @@ DELETE : http://localhost:8083/api/v1/comments/{id}
 <summary>Technologies</summary>
   
 ![spring-boot](https://github.com/Akbank-Patika-dev-Java-Spring-Bootcamp/homework-2-sinemturkcu/assets/42895382/1ec5a4da-e340-41c1-9eaf-e4c4e87a8add)
+  
+![1024px-MySQL ff87215b43fd7292af172e2a5d9b844217262571](https://github.com/Akbank-Patika-dev-Java-Spring-Bootcamp/homework-2-sinemturkcu/assets/42895382/a0083014-ee00-44d5-877f-eca57759e311)
+  
+![mapstruct](https://github.com/Akbank-Patika-dev-Java-Spring-Bootcamp/homework-2-sinemturkcu/assets/42895382/d4bc4bf4-79ab-4f4d-b594-6e4788c622e9)
+
 </details>
 
