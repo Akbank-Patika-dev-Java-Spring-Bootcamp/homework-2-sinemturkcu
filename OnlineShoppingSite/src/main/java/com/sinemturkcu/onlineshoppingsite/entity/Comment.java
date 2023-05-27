@@ -18,13 +18,13 @@ public class Comment extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Comment")
+    @Column(name = "Comment",nullable = false)
     private String comment;
 
-    @Column(name = "Client_id")
+    @Column(name = "Client_id",nullable = false)
     private Long clientId;
 
-    @Column(name = "Product_id")
+    @Column(name = "Product_id", nullable = false)
     private Long productId;
 
 
