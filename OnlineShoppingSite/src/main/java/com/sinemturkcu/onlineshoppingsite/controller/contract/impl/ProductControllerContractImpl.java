@@ -36,4 +36,10 @@ import java.util.List;
         return ProductMapper.INSTANCE.convertToProductDto(product);
     }
 
+    @Override
+    public void delete(Long id) {
+        Product product=productService.getById(id);
+        productService.delete(product);
+    }
+
 }

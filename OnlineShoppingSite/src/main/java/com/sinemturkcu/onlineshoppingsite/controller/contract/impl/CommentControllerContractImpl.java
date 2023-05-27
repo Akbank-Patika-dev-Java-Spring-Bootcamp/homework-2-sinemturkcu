@@ -53,4 +53,10 @@ public class CommentControllerContractImpl implements CommentControllerContract 
         List<Comment> commentList = commentService.getCommentsByProductId(id);
         return CommentMapper.INSTANCE.converToCommentDTOList(commentList);
     }
+
+    @Override
+    public void delete(Long id) {
+        Comment comment = commentService.getById(id);
+        commentService.delete(comment);
+    }
 }

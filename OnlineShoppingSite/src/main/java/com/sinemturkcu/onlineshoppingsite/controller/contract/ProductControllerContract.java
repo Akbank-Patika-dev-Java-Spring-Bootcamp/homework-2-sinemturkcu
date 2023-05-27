@@ -9,6 +9,7 @@ public interface ProductControllerContract {
     ProductDto save(ProductSaveRequest productSaveRequest);
     List<ProductDto> findAll();
     ProductDto findById(Long id);
+    void delete(Long id);
 
 
 

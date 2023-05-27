@@ -3,6 +3,7 @@ package com.sinemturkcu.onlineshoppingsite.controller;
 import com.sinemturkcu.onlineshoppingsite.controller.contract.ProductControllerContract;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ProductSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ProductDto;
+import com.sinemturkcu.onlineshoppingsite.entity.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +33,10 @@ public class ProductController {
     public ResponseEntity<ProductDto> getById(@PathVariable Long id){
         var response = productControllerContract.findById(id);
         return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+       productControllerContract.delete(id);
     }
 
 

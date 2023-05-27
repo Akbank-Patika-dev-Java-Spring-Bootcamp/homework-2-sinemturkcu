@@ -10,4 +10,5 @@ public interface CommentControllerContract {
      CommentDto getById(Long id);
      List<CommentDto> getByClientComments(Long id);
      List<CommentDto> getCommentsByProductId(Long id);
+     void delete(Long id);
 }

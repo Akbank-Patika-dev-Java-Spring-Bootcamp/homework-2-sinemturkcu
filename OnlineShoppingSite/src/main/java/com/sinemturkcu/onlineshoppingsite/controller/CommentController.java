@@ -3,6 +3,7 @@ package com.sinemturkcu.onlineshoppingsite.controller;
 import com.sinemturkcu.onlineshoppingsite.controller.contract.CommentControllerContract;
 import com.sinemturkcu.onlineshoppingsite.dto.request.CommentSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.CommentDto;
+import com.sinemturkcu.onlineshoppingsite.entity.Comment;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -43,6 +44,10 @@ public class CommentController {
     public ResponseEntity<List<CommentDto>> getCommentsByProductId(@RequestParam Long productId) {
         var response = commentControllerContract.getCommentsByProductId(productId);
         return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        commentControllerContract.delete(id);
     }
 
 }
