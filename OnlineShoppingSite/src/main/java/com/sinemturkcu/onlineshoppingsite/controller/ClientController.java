@@ -33,8 +33,8 @@ public class ClientController {
         return clientControllerContract.getById(id);
     }
 
-    @GetMapping("/{clientName}")
-    public ClientDto getByClientName(@PathVariable String clientName){
+    @GetMapping("/client")
+    public ClientDto getByClientName(@RequestParam String clientName){
         return clientControllerContract.getByFullName(clientName);
     }
 
