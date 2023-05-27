@@ -1,5 +1,5 @@
-#APIs
-##1. PRODUCT
+# APIs
+## 1. PRODUCT
 
 1. List all products
 ```text
@@ -85,7 +85,7 @@ GET : http://localhost:8083/api/v1/products/{id}
     "productImageUrl": ""
 }
 ```
-##2. Client
+## 2. Client
 1. List all clients
 ```text
 GET : http://localhost:8083/api/v1/clients
@@ -180,7 +180,7 @@ GET : http://localhost:8083/api/v1/clients/client?clientName=Işın Su
     "enumClientType": "USER"
 }
 ```
-##2. Comment
+## 2. Comment
 1. List all comments
 ```text
 GET : http://localhost:8083/api/v1/comments
