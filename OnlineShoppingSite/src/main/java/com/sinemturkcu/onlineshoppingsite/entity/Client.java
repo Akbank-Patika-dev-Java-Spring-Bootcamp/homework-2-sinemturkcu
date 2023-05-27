@@ -26,10 +26,10 @@ public class Client extends BaseEntity {
     private String fullName;
 
 
-    @Column(name = "Email" , length = 50 , nullable = false)
+    @Column(name = "Email" , length = 50 , nullable = false, unique = true)
     private String email;
 
-    @Column(name = "PhoneNumber", nullable = false)
+    @Column(name = "PhoneNumber", nullable = false, unique = true)
     private String phoneNumber;
 
     private EnumClientType enumClientType;
