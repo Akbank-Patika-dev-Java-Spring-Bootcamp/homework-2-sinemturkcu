@@ -1,5 +1,7 @@
-# APIs
-## 1. PRODUCT
+<details>
+  <summary>APIs</summary>
+    
+  ## 1. PRODUCT
 
 1. List all products
 ```text
@@ -280,3 +282,7 @@ GET http://localhost:8083/api/v1/comments/product?productId=1
 
 ```json
 ```
+
+  
+  
+</details>
