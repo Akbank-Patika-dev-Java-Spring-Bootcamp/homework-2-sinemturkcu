@@ -4,14 +4,18 @@ import com.sinemturkcu.onlineshoppingsite.General.BaseEntity;
 import com.sinemturkcu.onlineshoppingsite.enums.EnumClientType;
 import jakarta.persistence.*;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
-@Table(name = "client")
+@Table(name = "Client")
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Client extends BaseEntity {
 
     @Id
@@ -29,5 +33,6 @@ public class Client extends BaseEntity {
     private String phoneNumber;
 
     private EnumClientType enumClientType;
+
 
 }
