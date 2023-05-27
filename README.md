@@ -87,6 +87,10 @@ GET : http://localhost:8083/api/v1/products/{id}
     "productImageUrl": ""
 }
 ```
+4. Delete product
+```text
+DELETE : http://localhost:8083/api/v1/products/{id}
+```
 ## 2. Client
 1. List all clients
 ```text
@@ -182,6 +186,12 @@ GET : http://localhost:8083/api/v1/clients/client?clientName=Işın Su
     "enumClientType": "USER"
 }
 ```
+
+5. Delete client by client id
+```text
+DELETE :  http://localhost:8083/api/v1/clients/{id}
+```
+  
 ## 2. Comment
 1. List all comments
 ```text
@@ -276,8 +286,9 @@ GET http://localhost:8083/api/v1/comments/product?productId=1
     }
 ]
 ```
-
+6. Delete comment
 ```text
+DELETE : http://localhost:8083/api/v1/comments/{id} 
 ```
 
 ```json
