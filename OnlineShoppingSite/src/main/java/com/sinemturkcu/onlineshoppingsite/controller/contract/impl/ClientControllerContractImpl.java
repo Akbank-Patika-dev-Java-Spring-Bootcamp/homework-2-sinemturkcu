@@ -43,7 +43,8 @@ public class ClientControllerContractImpl implements ClientControllerContract {
 
     @Override
     public ClientDto getByFullName(String fullName) {
-       return clientService.getByFullName(fullName);
+        Client client=clientService.getByFullName(fullName);
+       return ClientMapper.INSTANCE.convertToClientDTO(client);
     }
 
 }
