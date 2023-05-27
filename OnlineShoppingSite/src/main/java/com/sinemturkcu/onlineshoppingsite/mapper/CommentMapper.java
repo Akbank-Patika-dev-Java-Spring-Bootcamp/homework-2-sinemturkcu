@@ -15,6 +15,7 @@ public interface CommentMapper {
 
     Comment convertToComment(CommentSaveRequest commentSaveRequest);
     CommentDto convertToCommentDTO(Comment comment);
+    List<CommentDto> converToCommentDTOList(List<Comment> commentList);
 
 
 }
