@@ -1,3 +1,5 @@
+The project includes the user, product and comment sections of the backend services of an online shopping site. It is a service that manages user products and comments.
+
 <details>
   <summary>APIs</summary>
     
