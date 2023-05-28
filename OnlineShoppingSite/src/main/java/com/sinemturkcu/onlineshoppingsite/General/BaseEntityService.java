@@ -1,13 +1,11 @@
 package com.sinemturkcu.onlineshoppingsite.General;
 
-import com.sinemturkcu.onlineshoppingsite.entity.Client;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -50,6 +48,9 @@ public abstract class BaseEntityService <E extends BaseEntity, R extends JpaRepo
     public E update(Long id){
         E e = repository.findById(id).orElseThrow();
         return  repository.save(e);
+    }
+    public boolean isPresent(Long id){
+        return repository.existsById(id);
     }
 
 
