@@ -176,18 +176,6 @@ request:
 ```json
 response:
 {
-"id": 1,
-"productName": "APPLE MNWA3TU/A MacBook Pro",
-"productPrice": 92999.0,
-"productCategory": "ELECTRONICS",
-"productStock": 5,
-"productDescription": "M2 MAX/12CPU/38GPU/32GB RAM/1TBSSD/Uzay Grisi",
-"productImageUrl": ""
-}
-```
-```json
-response:
-{
 "data": {
 "fullName": "Işın Su",
 "email": "isinsu@gmail.com",
@@ -199,6 +187,7 @@ response:
 "success": true
 }
 ```
+
 4. Get client by client name
 ```text
 GET : http://localhost:8083/api/v1/clients/client?clientName=Işın Su
