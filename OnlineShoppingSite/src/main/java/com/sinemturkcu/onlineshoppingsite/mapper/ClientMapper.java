@@ -1,5 +1,6 @@
 package com.sinemturkcu.onlineshoppingsite.mapper;
 
+import com.sinemturkcu.onlineshoppingsite.dto.request.ClientUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ClientDto;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ClientSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.entity.Client;
@@ -16,5 +17,6 @@ public interface ClientMapper {
     Client convertToClient(ClientSaveRequest clientSaveRequest);
     ClientDto convertToClientDTO(Client client);
     List<ClientDto> convertToClientDTOList(List<Client> clientList);
+    Client convertToClient(ClientUpdateRequest clientUpdateRequest);
 
 }
