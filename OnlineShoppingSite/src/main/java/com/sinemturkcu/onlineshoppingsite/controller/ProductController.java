@@ -1,6 +1,7 @@
 package com.sinemturkcu.onlineshoppingsite.controller;
 
 import com.sinemturkcu.onlineshoppingsite.controller.contract.ProductControllerContract;
+import com.sinemturkcu.onlineshoppingsite.dto.request.ProductPriceUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ProductSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ProductDto;
 import com.sinemturkcu.onlineshoppingsite.entity.Product;
@@ -37,6 +38,12 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
        productControllerContract.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProductDto> updatePriceById(@PathVariable Long id,@RequestBody ProductPriceUpdateRequest productPriceUpdateRequest) {
+        ProductDto productDTO = productControllerContract.updatePriceById(id,productPriceUpdateRequest);
+        return ResponseEntity.ok(productDTO);
     }
 
 

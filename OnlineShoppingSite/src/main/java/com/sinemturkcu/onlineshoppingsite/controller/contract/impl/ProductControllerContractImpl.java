@@ -1,6 +1,7 @@
 package com.sinemturkcu.onlineshoppingsite.controller.contract.impl;
 
 import com.sinemturkcu.onlineshoppingsite.controller.contract.ProductControllerContract;
+import com.sinemturkcu.onlineshoppingsite.dto.request.ProductPriceUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ProductSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ProductDto;
 import com.sinemturkcu.onlineshoppingsite.entity.Product;
@@ -40,6 +41,14 @@ import java.util.List;
     public void delete(Long id) {
         Product product=productService.getById(id);
         productService.delete(product);
+    }
+
+    @Override
+    public ProductDto updatePriceById(Long id, ProductPriceUpdateRequest productPriceUpdateRequest) {
+        Product product=productService.getById(id);
+        product.setProductPrice(productPriceUpdateRequest.productPrice());
+        productService.save(product);
+        return ProductMapper.INSTANCE.convertToProductDto(product);
     }
 
 }

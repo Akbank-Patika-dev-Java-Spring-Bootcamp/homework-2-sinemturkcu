@@ -1,5 +1,6 @@
 package com.sinemturkcu.onlineshoppingsite.controller.contract;
 
+import com.sinemturkcu.onlineshoppingsite.dto.request.ProductPriceUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ProductSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ProductDto;
 
@@ -10,6 +11,7 @@ public interface ProductControllerContract {
     List<ProductDto> findAll();
     ProductDto findById(Long id);
     void delete(Long id);
+    ProductDto updatePriceById(Long id, ProductPriceUpdateRequest productPriceUpdateRequest);
 
 
 
