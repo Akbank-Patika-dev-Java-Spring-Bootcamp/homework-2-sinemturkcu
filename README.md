@@ -1,3 +1,5 @@
+The project includes the user, product and comment sections of the backend services of an online shopping site. It is a service that manages user products and comments.
+
 <details>
   <summary>APIs</summary>
     
@@ -91,6 +93,30 @@ GET : http://localhost:8083/api/v1/products/{id}
 ```text
 DELETE : http://localhost:8083/api/v1/products/{id}
 ```
+5. Update product price by product id
+```text
+PUT http://localhost:8083/api/v1/products/{id}
+```
+
+```json
+  Request:
+{
+    "productPrice": 85000.0
+}
+  ```
+  
+```json
+  Response:
+{
+    "id": 1,
+    "productName": "APPLE MNWA3TU/A MacBook Pro",
+    "productPrice": 85000.0,
+    "productCategory": "ELECTRONICS",
+    "productStock": 5,
+    "productDescription": "M2 MAX/12CPU/38GPU/32GB RAM/1TBSSD/Uzay Grisi",
+    "productImageUrl": ""
+}
+  ```
 ## 2. Client
 1. List all clients
 ```text
@@ -192,7 +218,7 @@ GET : http://localhost:8083/api/v1/clients/client?clientName=Işın Su
 DELETE :  http://localhost:8083/api/v1/clients/{id}
 ```
   
-## 2. Comment
+## 3. Comment
 1. List all comments
 ```text
 GET : http://localhost:8083/api/v1/comments
@@ -290,10 +316,17 @@ GET http://localhost:8083/api/v1/comments/product?productId=1
 ```text
 DELETE : http://localhost:8083/api/v1/comments/{id} 
 ```
+</details>
 
-```json
-```
-
+<details>
+<summary>Technologies</summary>
+ <br>
   
+ - Spring Boot (3.1.0)
+ -  MySQL
+ -  Hibernate
+ -  MapStruct
+ - Lombok
   
 </details>
+
