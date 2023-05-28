@@ -1,6 +1,7 @@
 package com.sinemturkcu.onlineshoppingsite.controller.contract.impl;
 
 import com.sinemturkcu.onlineshoppingsite.controller.contract.ClientControllerContract;
+import com.sinemturkcu.onlineshoppingsite.dto.request.ClientUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ClientDto;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ClientSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.entity.Client;
@@ -44,7 +45,15 @@ public class ClientControllerContractImpl implements ClientControllerContract {
     @Override
     public ClientDto getByFullName(String fullName) {
         Client client=clientService.getByFullName(fullName);
-       return ClientMapper.INSTANCE.convertToClientDTO(client);
+        return ClientMapper.INSTANCE.convertToClientDTO(client);
+    }
+
+    @Override
+    public ClientDto updateClient(Long id,ClientUpdateRequest clientUpdateRequest) {
+        Client client = clientService.getById(id);
+        client.setFullName(clientUpdateRequest.fullName());
+        clientService.save(client);
+        return ClientMapper.INSTANCE.convertToClientDTO(client);
     }
 
 }

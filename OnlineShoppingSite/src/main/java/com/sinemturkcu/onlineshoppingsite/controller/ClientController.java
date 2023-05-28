@@ -2,6 +2,7 @@ package com.sinemturkcu.onlineshoppingsite.controller;
 
 import com.sinemturkcu.onlineshoppingsite.General.RestResponse;
 import com.sinemturkcu.onlineshoppingsite.controller.contract.ClientControllerContract;
+import com.sinemturkcu.onlineshoppingsite.dto.request.ClientUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ClientDto;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ClientSaveRequest;
 import lombok.RequiredArgsConstructor;
@@ -41,6 +42,12 @@ public class ClientController {
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id){
         clientControllerContract.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ClientDto> updateClient(@PathVariable Long id,@RequestBody ClientUpdateRequest clientUpdateRequest) {
+        ClientDto clientDto = clientControllerContract.updateClient(id,clientUpdateRequest);
+        return ResponseEntity.ok(clientDto);
     }
 
 }

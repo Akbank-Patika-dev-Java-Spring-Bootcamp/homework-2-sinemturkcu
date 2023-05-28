@@ -1,5 +1,6 @@
 package com.sinemturkcu.onlineshoppingsite.controller.contract;
 
+import com.sinemturkcu.onlineshoppingsite.dto.request.ClientUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ClientDto;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ClientSaveRequest;
 
@@ -11,4 +12,5 @@ public interface ClientControllerContract {
     void delete(Long id);
     ClientDto getById(Long id);
     ClientDto getByFullName(String fullName);
+    ClientDto updateClient(Long id,ClientUpdateRequest clientUpdateRequest);
 }
