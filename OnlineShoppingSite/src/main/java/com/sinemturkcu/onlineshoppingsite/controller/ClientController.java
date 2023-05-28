@@ -50,4 +50,9 @@ public class ClientController {
         return ResponseEntity.ok(clientDto);
     }
 
+    @DeleteMapping("/deleteClient")
+    public void deleteByClientNameAndPhoneNumber(@RequestParam String fullName, @RequestParam String phoneNumber) {
+        clientControllerContract.deleteByClientNameAndPhoneNumber(fullName,phoneNumber);
+    }
+
 }

@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -54,6 +55,15 @@ public class ClientControllerContractImpl implements ClientControllerContract {
         client.setFullName(clientUpdateRequest.fullName());
         clientService.save(client);
         return ClientMapper.INSTANCE.convertToClientDTO(client);
+    }
+
+    @Override
+    public void deleteByClientNameAndPhoneNumber(String fullName, String phoneNumber) {
+        Optional<Client> client = clientService.findByClientNameAndPhoneNumber(fullName,phoneNumber);
+        if(client.isPresent()){
+            throw new RuntimeException();
+        }
+        clientService.deleteById(client.get().getId());
     }
 
 }

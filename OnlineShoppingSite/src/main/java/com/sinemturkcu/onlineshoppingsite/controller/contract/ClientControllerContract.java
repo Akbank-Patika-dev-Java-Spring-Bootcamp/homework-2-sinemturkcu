@@ -13,4 +13,5 @@ public interface ClientControllerContract {
     ClientDto getById(Long id);
     ClientDto getByFullName(String fullName);
     ClientDto updateClient(Long id,ClientUpdateRequest clientUpdateRequest);
+    void deleteByClientNameAndPhoneNumber(String fullName,String phoneNumber);
 }
