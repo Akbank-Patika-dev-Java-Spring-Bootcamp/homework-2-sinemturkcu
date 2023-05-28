@@ -218,6 +218,28 @@ GET : http://localhost:8083/api/v1/clients/client?clientName=Işın Su
 DELETE :  http://localhost:8083/api/v1/clients/{id}
 ```
   
+6. Update client by client id
+```text
+PUT : http://localhost:8083/api/v1/clients/{id}
+```
+  
+  ```json
+Request:
+  {
+     "fullName":"Gizem Türkçü"
+   }
+```
+  
+   ```json
+Response:
+  {
+    "fullName": "Gizem Türkçü",
+    "email": "isinsu@gmail.com",
+    "phoneNumber": "1111111111",
+    "enumClientType": "USER"
+}
+```
+  
 ## 3. Comment
 1. List all comments
 ```text
