@@ -1,4 +1,4 @@
 package com.sinemturkcu.onlineshoppingsite.dto.request;
 
-public record ClientUpdateRequest(String fullName) {
+public record ClientUpdateRequest(String fullN) {
 }
