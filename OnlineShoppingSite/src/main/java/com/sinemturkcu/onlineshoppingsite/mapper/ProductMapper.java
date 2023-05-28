@@ -1,5 +1,6 @@
 package com.sinemturkcu.onlineshoppingsite.mapper;
 
+import com.sinemturkcu.onlineshoppingsite.dto.request.ProductPriceUpdateRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.request.ProductSaveRequest;
 import com.sinemturkcu.onlineshoppingsite.dto.response.ProductDto;
 import com.sinemturkcu.onlineshoppingsite.entity.Product;
@@ -15,5 +16,6 @@ public interface ProductMapper {
     Product convertToProduct(ProductSaveRequest productSaveRequest);
     ProductDto convertToProductDto(Product product);
     List<ProductDto> convertToProductDtoList(List<Product> products);
+    Product convertToProduct(ProductPriceUpdateRequest productPriceUpdateRequest);
 
 }
